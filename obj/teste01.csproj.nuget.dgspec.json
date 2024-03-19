@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Pichau\\Desktop\\arquivos que não deveriam estar aqui\\pasta_teste\\teste01\\teste01.csproj": {}
+    "C:\\Users\\Pichau\\Desktop\\arquivos que não deveriam estar aqui\\pasta_teste\\teste01\\teste01.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Pichau\\Desktop\\arquivos que não deveriam estar aqui\\pasta_teste\\teste01\\teste01.csproj": {
+    "C:\\Users\\Pichau\\Desktop\\arquivos que não deveriam estar aqui\\pasta_teste\\teste01\\teste01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Pichau\\Desktop\\arquivos que não deveriam estar aqui\\pasta_teste\\teste01\\teste01.csproj",
+        "projectUniqueName": "C:\\Users\\Pichau\\Desktop\\arquivos que não deveriam estar aqui\\pasta_teste\\teste01\\teste01.csproj",
         "projectName": "teste01",
-        "projectPath": "c:\\Users\\Pichau\\Desktop\\arquivos que não deveriam estar aqui\\pasta_teste\\teste01\\teste01.csproj",
+        "projectPath": "C:\\Users\\Pichau\\Desktop\\arquivos que não deveriam estar aqui\\pasta_teste\\teste01\\teste01.csproj",
         "packagesPath": "C:\\Users\\Pichau\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Pichau\\Desktop\\arquivos que não deveriam estar aqui\\pasta_teste\\teste01\\obj\\",
+        "outputPath": "C:\\Users\\Pichau\\Desktop\\arquivos que não deveriam estar aqui\\pasta_teste\\teste01\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pichau\\AppData\\Roaming\\NuGet\\NuGet.Config"

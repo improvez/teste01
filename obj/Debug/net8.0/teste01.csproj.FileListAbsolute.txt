@@ -12,3 +12,4 @@ C:\Users\Pichau\Desktop\arquivos que não deveriam estar aqui\pasta_teste\teste0
 C:\Users\Pichau\Desktop\arquivos que não deveriam estar aqui\pasta_teste\teste01\obj\Debug\net8.0\teste01.pdb
 C:\Users\Pichau\Desktop\arquivos que não deveriam estar aqui\pasta_teste\teste01\obj\Debug\net8.0\teste01.genruntimeconfig.cache
 C:\Users\Pichau\Desktop\arquivos que não deveriam estar aqui\pasta_teste\teste01\obj\Debug\net8.0\ref\teste01.dll
+C:\Users\Pichau\Desktop\arquivos que não deveriam estar aqui\pasta_teste\teste01\obj\Debug\net8.0\teste01.sourcelink.json

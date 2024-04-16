@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 
 namespace _teste01 {
     public class Order {
+
+        public int OrderId {get;set;}
         public Customer Customer {get;set;}
         public DateTime OrderDate {get;set;}
         public string ShippingAddress {get;set;}

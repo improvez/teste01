@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 
 namespace _teste01 {
     public class OrderItem {
+        public int OrderItemId {get;set;}
         public Product Product {get;set;}
         public double Quantity {get;set;}
 

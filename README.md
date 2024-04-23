@@ -95,3 +95,10 @@ Alta coesão e baixo acoplamento
 
 1 - relacionamento por agregação 
 2 - relacionamento por composição 
+
+Ler a respeito da arquitetura MVC.
+
+Tarefa: Implementar um algoritmo de busca, na classe CustomerRepositor que permita encontrar consumidores,
+contendo em seu nome ao menos 4 caracteres digitados pelo usuario.
+For na lista e achar o nome do customer.
+Digitar no minimo 4 caracteres.

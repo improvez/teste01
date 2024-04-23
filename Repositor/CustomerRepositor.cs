@@ -21,6 +21,9 @@ namespace _teste01 {
 
             return null;
         }
+        public List<Customer> Retrieve() {
+            return DataSet.Customers;
+        }
 
     }
 

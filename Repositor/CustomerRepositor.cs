@@ -10,6 +10,8 @@ namespace _teste01 {
         }
 
         public Customer Retrieve(int id) {
+            Customer customer = new Customer();
+            customer = new Customer();
             foreach(var c in DataSet.Customers) {
                 if( c.CustomerId == id) {
                     return c;

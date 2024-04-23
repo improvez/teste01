@@ -90,3 +90,8 @@ ORM - Object Relational Mapping.
 
 Framework que abstrai o trabalho de conectar no banco de dados.
 Entity Framework.
+
+Alta coesão e baixo acoplamento
+
+1 - relacionamento por agregação 
+2 - relacionamento por composição 

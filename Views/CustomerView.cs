@@ -8,7 +8,6 @@ namespace _teste01 {
 
         private CustomerController customerController;
 
-
         public CustomerView()
         {
             customerController = new CustomerController();

@@ -6,8 +6,12 @@ namespace _teste01 {
     public class CustomerView
     {
 
+        private CustomerController customerController;
+
+
         public CustomerView()
         {
+            customerController = new CustomerController();
             this.Init();
         }
         

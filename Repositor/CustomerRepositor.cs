@@ -33,6 +33,13 @@ namespace _teste01 {
             return DataSet.Customers.Where(c => c.Name.ToLower().Contains(name)).ToList();
         }
 
+        private int GetNextId() {
+            int n = 0;
+            foreach(var c in DataSet.Customers) {
+                if(c.CustomerId > n) n = c.CustomerId; 
+            }
+            return n++;
+        }
     }
 
 }

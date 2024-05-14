@@ -7,13 +7,25 @@ namespace _teste01 {
 
         private AddressRepositor addressRepositor;
 
-        public AddressController() {
-            this.addressRepositor = new AddressRepositor();
+        public AddressController()
+        {
+            addressRepositor = new AddressRepositor();
         }
-        
-        public Address Insert(Address address) {
-            this.addressRepositor.Save(address);
+
+        public Address Insert(Address address)
+        {            
+            addressRepositor.Create(address);
             return address;
         }
+
+        public Address Get(int id)
+        {
+            return addressRepositor.Read(id);
+        }
+
+        public List<Address> Get()
+        {
+            return addressRepositor.Read();
+        }        
     }
 }

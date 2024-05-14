@@ -16,7 +16,7 @@ namespace _teste01 {
             DataSet.Addresses.Add(address);
         }
 
-        public Address Retrieve(int id) {
+        public Address Read(int id) {
             foreach(var a in DataSet.Addresses) {
                 if( a.Id == id) {
                     return a;

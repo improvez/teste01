@@ -7,6 +7,7 @@ namespace _teste01 {
 
     public class CustomerRepositor {
         public void Save(Customer customer) {
+            customer.CustomerId = this.GetNextId();
             DataSet.Customers.Add(customer);
         }
 
@@ -26,6 +27,16 @@ namespace _teste01 {
             return DataSet.Customers;
         }
 
+        public List<Customer> RetrieveByName(string name) {
+            List<Customer> retorno = new List<Customer>();
+            foreach(var c in DataSet.Customers) {
+                if(c.Name.Contains(name)) {
+                    retorno.Add(c);
+                }
+            }
+            return retorno;
+        }
+
         public List<Customer> SearchByName(string name)
         {
             if (name.Length < 4) return new List<Customer>();
@@ -38,7 +49,7 @@ namespace _teste01 {
             foreach(var c in DataSet.Customers) {
                 if(c.CustomerId > n) n = c.CustomerId; 
             }
-            return n++;
+            return ++n;
         }
     }
 

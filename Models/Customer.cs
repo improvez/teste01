@@ -8,5 +8,9 @@ namespace _teste01 {
         public string LastName {get;set;}
         public string EmailAddress {get;set;}
         public List<Address> Addresses {get;set;} = new List<Address>();
+
+        public override string ToString() {
+            return $"{CustomerId} - {Name} - {EmailAddress}";
+        } 
     }
 }

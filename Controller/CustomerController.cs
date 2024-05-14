@@ -21,5 +21,9 @@ namespace _teste01 {
         public List<Customer> Get() {
             return customerRepositor.Retrieve();
         }
+
+        public List<Customer> GetByName(string name) {
+            return customerRepositor.RetrieveByName(name);
+        }
     }
 }

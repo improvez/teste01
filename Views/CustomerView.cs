@@ -28,6 +28,8 @@ namespace _teste01 {
                 Console.WriteLine("1 - Inserir Consumidor");
                 Console.WriteLine("2 - Pesquisar Consumidor");
                 Console.WriteLine("3 - Listar Consumidores");
+                Console.WriteLine("4 - Deletar Consumidor");
+                Console.WriteLine("5 - Exportar dados delimitados");
                 Console.WriteLine("0 - Sair");
 
                 int menu = 0;
@@ -40,7 +42,7 @@ namespace _teste01 {
                             aux = false;
                         break;
                         case 1:
-                            ListCustomers();
+                            InsertCustomer();
                         break;
                         case 2:
                             SearchCustomer();
@@ -48,6 +50,16 @@ namespace _teste01 {
                         break;
                         case 3:
                             ListCustomers(); 
+                        break;
+                        case 4:
+                            DeleteCustomer();
+                        break;
+                        case 5:
+                            if(customerController.ExportToDelimited()) {
+                                Console.WriteLine("Arquivo criado com sucesso");
+                            } else {
+                                Console.WriteLine("Falha ao criar o arquivo");
+                            }
                         break;
                         default: 
                             Console.WriteLine("Opção inválida.");
@@ -180,6 +192,45 @@ namespace _teste01 {
             foreach(Customer customer in result) {
                 Console.WriteLine(customer.ToString());
             }
+        }
+
+        private void DeleteCustomer() {
+            int aux = -1;
+            do {
+                Console.WriteLine("PESQUISAR CLIENTE");
+                Console.WriteLine("*********************");
+                Console.WriteLine("1 - Buscar por id");
+                Console.WriteLine("2 - Buscar por nome");
+                Console.WriteLine("0 - Sair");
+
+                string menuOpt = Console.ReadLine();
+                aux = Convert.ToInt16(menuOpt);    
+                switch(aux) {
+                    case 1:
+                        Console.WriteLine("Informe o id: ");
+                        int id = Convert.ToInt32(Console.ReadLine());
+                        ShowCustomerById(id);
+                    break;
+                    case 2:
+                        Console.WriteLine("Informe o nome: ");
+                        string name = Console.ReadLine();
+                        ShowCustomerByName(name);
+                    break;
+                    case 0:
+                    break;
+                    default:
+                        aux = -1;
+                        Console.WriteLine("Opção inválida!");
+                    break;
+                }
+
+            } while(aux != 0);        
+            return;
+        }
+
+        private void ExportCustomer() {
+
+            return;
         }
 
     }

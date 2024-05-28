@@ -102,3 +102,12 @@ Tarefa: Implementar um algoritmo de busca, na classe CustomerRepositor que permi
 contendo em seu nome ao menos 4 caracteres digitados pelo usuario.
 For na lista e achar o nome do customer.
 Digitar no minimo 4 caracteres.
+
+Tarefa proxima aula: 
+
+formatacao de composicao #
+[text](https://learn.microsoft.com/pt-br/dotnet/standard/base-types/composite-formatting)
+
+delimitado = separa com caracter (notas fiscais);
+tamanho fixo = cria seu propio modelo (utilizado em boletos);
+GCL - Garbage collector.

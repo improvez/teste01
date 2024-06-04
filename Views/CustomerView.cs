@@ -30,6 +30,7 @@ namespace _teste01 {
                 Console.WriteLine("3 - Listar Consumidores");
                 Console.WriteLine("4 - Deletar Consumidor");
                 Console.WriteLine("5 - Exportar dados delimitados");
+                Console.WriteLine("6 - Importar dados delimitados");
                 Console.WriteLine("0 - Sair");
 
                 int menu = 0;
@@ -61,6 +62,9 @@ namespace _teste01 {
                                 Console.WriteLine("Falha ao criar o arquivo");
                             }
                         break;
+                        case 6:
+                            ImportFromDelimited();
+                        break;
                         default: 
                             Console.WriteLine("Opção inválida.");
                             aux = true;
@@ -75,6 +79,16 @@ namespace _teste01 {
             }while(aux);
         }
 
+        private void ImportFromDelimited() {
+            System.Console.WriteLine("Informe o caminho do arquivo: ");
+            string pathFile = Console.ReadLine();
+
+            System.Console.WriteLine("Informe o caracter delimitador");
+            string delimiter = Console.ReadLine();
+
+            string response = customerController.ImportFromDelimited(pathFile, delimiter);
+            Console.WriteLine(response);
+        }
         private void InsertCustomer() {
             Console.WriteLine("*******************************************************");
             Console.WriteLine("INSERIR NOVO CONSUMIDOR");

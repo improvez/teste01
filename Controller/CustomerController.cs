@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
 
 namespace _teste01 {
@@ -42,5 +43,51 @@ namespace _teste01 {
             
             return ExportToFile.SaveToDelimitedTxt(fileName, fileContent);
         }
+
+        public string ImportFromDelimited(string filePath, string delimiter) {
+
+            bool result = true;
+            string msgReturn = string.Empty;
+            int lineCountSuccess = 0;
+            int lineCountError = 0;
+            int lineCountTotal = 0;
+            try
+            {
+                if(!File.Exists(filePath))
+                return "ERRO: Arquivo de importação não encontrado.";
+
+                using(StreamReader sr = new StreamReader(filePath)) {
+                    string line = string.Empty;
+                    while((line = sr.ReadLine()) != null) {
+                        lineCountTotal++;
+                        if(!customerRepositor.ImportFromTxt(line, delimiter)) {
+                            result = false;
+                            lineCountError++;
+                        } else {
+                            lineCountSuccess++;
+                        }
+
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                return $"ERRO: {ex.Message}";
+            }
+            if(result) {
+                msgReturn = "Dados importados com sucesso.";
+
+
+            } else {
+                msgReturn = "Dados parcialmente importados.";
+            }
+
+            msgReturn += $"\nTotal de linhas: {lineCountTotal}";
+            msgReturn += $"\n Sucesso: {lineCountSuccess}";
+            msgReturn += $"\n Erro: {lineCountError}";
+
+            return msgReturn;
+        }
+
     }
 }

@@ -11,6 +11,11 @@ namespace _teste01 {
             DataSet.Customers.Add(customer);
         }
 
+        public void Save(Customer customer, bool autoGenerateId = true) {
+            if(autoGenerateId) customer.CustomerId = this.GetNextId();
+            DataSet.Customers.Add(customer);
+        }
+
         public Customer Retrieve(int id) {
             Customer customer = new Customer();
             customer = new Customer();
@@ -42,6 +47,25 @@ namespace _teste01 {
             if (name.Length < 4) return new List<Customer>();
             name = name.ToLower();
             return DataSet.Customers.Where(c => c.Name.ToLower().Contains(name)).ToList();
+        }
+
+        public bool ImportFromTxt(string Line, string delimiter) {
+
+            if(string.IsNullOrWhiteSpace(Line)) return false;
+
+            string[] data = Line.Split(delimiter);
+
+            if(data.Count() < 1) return false;
+
+            Customer c = new Customer{
+                CustomerId = Convert.ToInt32((data[0] == null ? 0 : data[0])),
+                Name = (data[1] == null ? string.Empty : data[1]),
+                EmailAddress = (data[2] ?? string.Empty)
+            };
+
+            Save(c, false);
+            return true;
+
         }
 
         private int GetNextId() {
